@@ -79,6 +79,7 @@ header{
     height: 60px;
     border-bottom: 1px solid #f1f1f1;
     width: 100%;
+    z-index: 3;
 }
 #menu{
     display: flex;
@@ -258,4 +259,65 @@ h1.formation{
 }
 .item-block .blue-separator{
     margin: 20px auto;
+}
+
+#portfolio{
+    background-color: #2f618a;
+    padding: 60px;
+}
+h1.title-port{
+    color: #f1f1f1;
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+    margin: 30px 0 100px 0;
+    font-size: 30px;
+}
+.container-portfolio{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.item-portfolio .thumbnail{
+    display: block;
+    padding: 4px;
+    width: 70%;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    margin: 0 auto 20px auto;
+}
+.item-portfolio .thumbnail img {
+    width: 100%;
+    height: 100%;
+    filter: grayscale(100%);
+    transition: all 0.5s ease-in-out;
+}
+
+.item-portfolio .thumbnail img:hover + .thumbnail{
+    border: 1px solid #000000;
+}
+
+.item-portfolio .thumbnail img:hover{
+    filter: none;
+}
+
+footer{
+    height: 150px;
+    background-color: #333333;
+    padding: 20px 0 10px 0;
+}
+footer a i{
+    font-size: 25px;
+    transition: all 0.5s ease-in-out;
+}
+footer a i:hover{
+    font-size: 30px;
+}
+footer h5{
+    color: #f1f1f1;
+    font-family: 'Lato', sans-serif;
+    font-size: 15px;
+    margin-top: 60px;
+    
 }
