@@ -177,10 +177,6 @@ a.button{
     text-align: center;
     transition: all 0.4s ease-in-out;
 }
-/* .information:before{
-    opacity: 0;
-    animation: Up 0.5s 1s forwards ease-in-out;
-} */
 
 @keyframes Up {
     0% {
@@ -195,39 +191,7 @@ a.button{
     }
 }
 
-.info-adress:before{
-    position: absolute;
-    top: 916px;
-    left: 49.5px;
-    display: inline-block;
-    border-top: 0 solid #f1f1f1;
-    border-left: 14px solid transparent;
-    border-right: 14px solid transparent;
-    border-bottom: 14px solid #f1f1f1;
-    content: " ";
-}
-.info-email:before{
-    position: absolute;
-    top: 916px;
-    left: 103.5px;
-    display: inline-block;
-    border-top: 0 solid #f1f1f1;
-    border-left: 14px solid transparent;
-    border-right: 14px solid transparent;
-    border-bottom: 14px solid #f1f1f1;
-    content: " ";
-}
-.info-phone:before{
-    position: absolute;
-    top: 916px;
-    left: 156.5px;
-    display: inline-block;
-    border-top: 0 solid #f1f1f1;
-    border-left: 14px solid transparent;
-    border-right: 14px solid transparent;
-    border-bottom: 14px solid #f1f1f1;
-    content: " ";
-}
+
 
 .personnal-info i{
     display: inline-block;
@@ -238,15 +202,15 @@ a.button{
 .personnal-info .selector:hover ~ i{
     color: #FB1;
 }
-.personnal-info .selector:hover ~ .information, .personnal-info .selector:hover ~ .information:before{
+.personnal-info .selector:hover ~ .information{
     display: block;
     
     animation: Pop 0.5s forwards cubic-bezier(0.97, -0.39, 0, 1.38);
 }
-/* .personnal-info .selector:checked ~ .information{
+.personnal-info .selector:checked ~ .information{
     display: block;
     opacity: 1;
-} */
+}
 @keyframes Pop {
     0% {
         transform: scale(-0.1);
@@ -374,8 +338,8 @@ h1.competences{
 
 #experience{
     height: auto;
-    padding-top: 60px !important;
-    padding: 20px;
+    
+    padding: 60px 60px 0 60px;
     box-sizing: border-box;
 }
 h1.exp{
@@ -387,10 +351,10 @@ h1.exp{
 }
 .timeline > li{
     margin-bottom: 60px;
-    height: 300px;
+    height: 200px;
 }
 .line-timeline{
-    height: 1300px;
+    height: 1000px;
     width: 5px;
     position: absolute;
     left: 50%;
