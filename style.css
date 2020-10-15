@@ -44,10 +44,35 @@ a{
 #me{
     display: block;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     padding: 50px;
     box-sizing: border-box;
 }
+
+.profil {
+    border-radius: 50%;
+    margin-top: 70px;
+    height: 100%;
+    border: 4px solid #f1f1f1;
+    filter: drop-shadow(5px 5px 3px #000000);
+    transition: all 0.5s ease-in-out;
+    animation: RollIn 2s cubic-bezier(0.97, -0.39, 0, 1.38);
+}
+.profil:hover{
+    transform: scale(1.1);
+}
+@keyframes RollIn {
+    0% {
+        margin-right: -1300px;
+        transform: scale(0) rotate(0);
+        
+    }
+    100% {
+        transform: scale(1) rotate(-360deg);
+        margin-right: 0;
+    }
+}
+
 
 .name{
     font-family: 'Lato', sans-serif;
@@ -64,14 +89,25 @@ a{
     margin: 50px 0 80px 0;
 }
 .contact-links{
-    margin: 70px 0;
-    font-size: 30px;
+    margin: 70px 15px;
+    opacity: 0;
+    animation: SlideIn 1s 1.5s forwards cubic-bezier(0.97, -0.39, 0, 1.38);
 }
 .git, .linkedin, .twitter{
     display: inline-block;
-    font-size: 50px;
-    margin: 10px;
+    font-size: 2em;
+    margin-left: 10px;
     transition: all 0.4s ease-in-out;
+}
+@keyframes SlideIn {
+    0% {
+        margin: 0 -500px 30px 70px;
+        opacity: 0;
+    }
+    100% {
+        margin: 0 70px 30px 70px;
+        opacity: 1;
+    }
 }
 .selector{
     position: absolute;
@@ -83,10 +119,45 @@ a{
 .personnal-info{
     text-align: left;
     margin-top: 100px;
+    margin-bottom: 80px;
     display: flex;
-    width: 20%;
+    width: 50%;
     box-sizing: border-box;
-    justify-content: flex-start;
+    justify-content: space-around;
+    
+}
+/* .personnal-info i{
+    margin-left: 30px;
+} */
+/* .personnal-info{
+    animation: SlideLeftIn 2s cubic-bezier(0.97, -0.39, 0, 1.38);
+} */
+@keyframes SlideLeftIn {
+    0% {
+        margin-left: -400px;
+    }
+    100% {
+        margin-left: 0;
+    }
+}
+a.button{
+    margin-top: 30px;
+    animation: SlideUp 1.5s ease-in-out;
+}
+@keyframes SlideUp {
+    0% {
+        opacity: 0;
+        padding: 100px;
+        border-radius: 50%;
+    }
+    80% {
+        border-radius: 5px;
+        padding: 10px;
+    }
+    100% {
+        padding: 20px;
+        opacity: 1;
+    }
 }
 .personnal-info > div{
     width: inherit;
@@ -94,6 +165,7 @@ a{
 }
 .information{
     display: none;
+    position: absolute;
     opacity: 0;
     font-family: 'Lato', sans-serif;
     background-color: #f1f1f1;
@@ -104,9 +176,27 @@ a{
     text-align: center;
     transition: all 0.4s ease-in-out;
 }
-.info-adress:after{
+/* .information:before{
+    opacity: 0;
+    animation: Up 0.5s 1s forwards ease-in-out;
+} */
+
+@keyframes Up {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+        top: 930px;
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+        top: 916px;
+    }
+}
+
+.info-adress:before{
     position: absolute;
-    top: 614px;
+    top: 916px;
     left: 49.5px;
     display: inline-block;
     border-top: 0 solid #f1f1f1;
@@ -115,9 +205,9 @@ a{
     border-bottom: 14px solid #f1f1f1;
     content: " ";
 }
-.info-email:after{
+.info-email:before{
     position: absolute;
-    top: 614px;
+    top: 916px;
     left: 103.5px;
     display: inline-block;
     border-top: 0 solid #f1f1f1;
@@ -126,9 +216,9 @@ a{
     border-bottom: 14px solid #f1f1f1;
     content: " ";
 }
-.info-phone:after{
+.info-phone:before{
     position: absolute;
-    top: 614px;
+    top: 916px;
     left: 156.5px;
     display: inline-block;
     border-top: 0 solid #f1f1f1;
@@ -147,13 +237,24 @@ a{
 .personnal-info .selector:hover ~ i{
     color: #FB1;
 }
-.personnal-info .selector:hover ~ .information{
+.personnal-info .selector:hover ~ .information, .personnal-info .selector:hover ~ .information:before{
     display: block;
-    opacity: 1;
+    
+    animation: Pop 0.5s forwards cubic-bezier(0.97, -0.39, 0, 1.38);
 }
-.personnal-info .selector:checked ~ .information{
+/* .personnal-info .selector:checked ~ .information{
     display: block;
     opacity: 1;
+} */
+@keyframes Pop {
+    0% {
+        transform: scale(-0.1);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 .git:hover, .linkedin:hover, .twitter:hover{
     transform: scale(1.3);
@@ -232,13 +333,13 @@ a{
 #skills{
     background-color: #f1f1f1;
 
-    padding: 60px;
+    padding: 40px;
 }
 h1.competences{
     color: #2f618a;
     text-transform: uppercase;
     font-family: 'Lato', sans-serif;
-    margin: 30px 0 150px 0;
+    margin: 30px 0 80px 0;
     font-size: 30px;
 }
 .skillsprogress{
@@ -262,7 +363,9 @@ h1.competences{
     color: #f1f1f1;
     padding: 13px 0;
     text-shadow: 1px 1px 1px #000000;
+    transition: all 1s ease-in-out;
 }
+
 .s-blue{
     
     background-color: #2f618a;
@@ -395,24 +498,25 @@ h1.formation{
 }
 
 #portfolio{
-    height: 100vh;
+    height: auto;
     padding: 60px;
 }
 h1.title-port{
     color: #f1f1f1;
     font-family: 'Lato', sans-serif;
     text-transform: uppercase;
-    margin: 30px 0 100px 0;
+    margin: 30px 0 80px 0;
     font-size: 30px;
 }
 .container-portfolio{
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 
 .item-portfolio{
-    width: 33%;
+    width: 100%;
+    animation: Slider 5s infinite;
 }
 
 .item-portfolio .thumbnail{

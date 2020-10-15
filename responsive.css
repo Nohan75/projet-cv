@@ -39,11 +39,29 @@
         background-color: #2f618a;
         border-bottom: 1px solid #f1f1f1;
     }
+    .contact-links{
+        margin: 0 70px 30px 70px;
+        opacity: 1;
+        animation: none;
+    }
+    .job{
+        animation: Pop 1s ease-in-out;
+    }
+    a.button{
+        animation: none;
+    }
+    .git, .linkedin, .twitter{
+        font-size: 1.3em;
+        
+    }
     .item{
         width: 100%;
     }
     .timeline > li {
         margin-bottom: 50px;
+    }
+    .container-portfolio{
+        flex-wrap: wrap;
     }
     .item-portfolio{
         width: 100%;
