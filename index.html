@@ -7,9 +7,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" crossorigin="anonymous" />
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="responsive-little.css">
 </head>
 <body>
     <nav class="navbar">
+        <input type="checkbox" class="toggler">
+        <div class="hamburger">
+            <span class="first"></span>
+            <span class="second"></span>
+            <span class="third"></span>
+        </div>
         <ul id="menu">
             <li class="link"><a href="#me">Moi</a></li>
             <li class="link"><a href="#skills">Compétences</a></li>
@@ -19,7 +27,7 @@
         </ul>
     </nav>
 
-    <header id="me">
+    <section id="me">
         
 
         <h1 class="name">Nohan Marie-Louise</h1>
@@ -30,7 +38,24 @@
             <a class="twitter" href="https://twitter.com/NohanMarie"><i class="fab fa-twitter"></i></a>
         </div>
         <a target="_blank" class="button" href="MARIE-LOUISE_Nohan_Bachelor Coding Paris.pdf">Télécharger cv</a>
-    </header>
+        <div class="personnal-info">
+            <div>
+                <input type="radio" name="selector" checked class="selector">
+                <i class="fas fa-map-marker-alt"></i>
+                <p class="information info-adress">29 rue des Apennins</br>75 017 PARIS</p>
+            </div>
+            <div>
+                <input type="radio" name="selector" class="selector">
+                <i class="fas fa-envelope"></i>
+                <p class="information info-email">nohanmarielouise@gmail.com</p>
+            </div>
+            <div>
+                <input type="radio" name="selector" class="selector">
+                <i class="fas fa-phone"></i>
+                <p class="information info-phone">07 66 10 89 89</p>
+            </div>
+        </div>
+    </section>
 
     <section id="skills">
         <div class="blue-separator"></div>
@@ -72,7 +97,7 @@
                             <h3>Projet de Timeline</h3>
                             <p class="time"><i class="far fa-clock"></i> 2020</p>
                         </div>
-                        <div class="blue-separator"></div>
+                        <div class="little-blue-separator"></div>
                         <div class="timeline-body">Création d'une Timeline avec apparition des éléments lors du scroll à 
                             l'aide du HTML du CSS ainsi que de Javascript et ses librairies.
                         </div>
@@ -87,7 +112,7 @@
                             <h3>Projet jeu Snake</h3>
                             <p class="time"><i class="far fa-clock"></i> 2020</p>
                         </div>
-                        <div class="blue-separator"></div>
+                        <div class="little-blue-separator"></div>
                         <div class="timeline-body">Création d'un jeu du serpent lors de ma formation en ligne.
                             Programmation avec Javascript
                         </div>
@@ -102,7 +127,7 @@
                             <h3>Top 5 meilleurs actrices</h3>
                             <p class="time"><i class="far fa-clock"></i> 2020</p>
                         </div>
-                        <div class="blue-separator"></div>
+                        <div class="little-blue-separator"></div>
                         <div class="timeline-body">Création d'un site web regroupant le top 5 des meilleurs actrices.
                             Animation en JQuery
                         </div>
@@ -117,7 +142,7 @@
                             <h3>Site Web Agence de voyage</h3>
                             <p class="time"><i class="far fa-clock"></i> 2020</p>
                         </div>
-                        <div class="blue-separator"></div>
+                        <div class="little-blue-separator"></div>
                         <div class="timeline-body">Création d'un site One page d'agence de voyage fictive.
                             Page codé avec HTML5 et CSS3
                         </div>
@@ -138,7 +163,7 @@
                     <i class="fas fa-graduation-cap"></i>
                     <h3>Coding Factory - Paris</h3>
                     <h4>Bachelor développeur web mobile</h4>
-                    <div class="blue-separator"></div>
+                    <div class="little-blue-separator"></div>
                     <p>Méthode Agile</p>
                 </div>
             </div>
@@ -148,7 +173,7 @@
                     <i class="fas fa-graduation-cap"></i>
                     <h3>Udemy.com</h3>
                     <h4>Formation online "Développeur web"</h4>
-                    <div class="blue-separator"></div>
+                    <div class="little-blue-separator"></div>
                     <p>HTML/CSS, Javascript, JQuery, PHP</p>
                     <p>Responsive Design</p>
                 </div>
@@ -159,7 +184,7 @@
                     <i class="fas fa-graduation-cap"></i>
                     <h3>École 42 - Paris</h3>
                     <h4>Formation développeur</h4>
-                    <div class="blue-separator"></div>
+                    <div class="little-blue-separator"></div>
                     <p>C</p>
                     <p>Gestion de projets</p>
                 </div>
@@ -170,7 +195,7 @@
                     <i class="fas fa-graduation-cap"></i>
                     <h3>Bac S - Martinique</h3>
                     <h4>Spécialité ISN</h4>
-                    <div class="blue-separator"></div>
+                    <div class="little-blue-separator"></div>
                     <p>Java</p>
                 </div>
             </div>
@@ -180,7 +205,7 @@
                     <i class="fas fa-graduation-cap"></i>
                     <h3>Openclassrooms</h3>
                     <h4>Formation online HTML5 / CSS3</h4>
-                    <div class="blue-separator"></div>
+                    <div class="little-blue-separator"></div>
                     <p>HTML5 / CSS3</p>
                 </div>
             </div>
@@ -193,17 +218,17 @@
         <h1 class="title-port">Portfolio</h1>
         <div class="container-portfolio">
             <div class="item-portfolio">
-                <a class="thumbnail" target="_blank" href="https://github.com/Nohan75/Portfolio/tree/master/Agence%20de%20voyage">T
+                <a class="thumbnail" target="_blank" href="https://nohan75.github.io/Portfolio/Agence%20de%20voyage/">T
                     <img src="image-voyage.png" alt="Screenshot de la page d'accueil du site d'agence de voyage">
                 </a>
             </div>
             <div class="item-portfolio">
-                <a class="thumbnail" target="_blank" href="https://github.com/Nohan75/Portfolio/tree/master/Jeux%20Serpent">
+                <a class="thumbnail" target="_blank" href="https://nohan75.github.io/Portfolio/Jeux%20Serpent/">
                     <img src="image-snake.png" alt="Screenshot de la page du jeu de Snake">
                 </a>
             </div>
             <div class="item-portfolio">
-                <a class="thumbnail" target="_blank" href="https://github.com/Nohan75/Portfolio/tree/master/5%20Meilleurs%20actrices">
+                <a class="thumbnail" target="_blank" href="https://nohan75.github.io/Portfolio/5%20Meilleurs%20actrices">
                     <img src="image-top5.png" alt="Screenshot de la page d'accueil de mon site Top 5 des meilleures actrices">
                 </a>
             </div>

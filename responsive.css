@@ -1,0 +1,51 @@
+@media only screen and (max-width: 700px){
+    .link{
+        width: 100%;
+        display: block;
+    }
+    #menu{
+        position: absolute;
+        top: -330px;
+    }
+    .hamburger{
+        display: block;
+        z-index: 1;
+    }
+    .toggler{
+        display: block;
+        position: absolute;
+        top: 17px;
+        left: 10px;
+        width: 30px;
+        height: 19px;
+        z-index: 2;
+        opacity: 0;
+        cursor: pointer;
+    }
+    .toggler:checked + .hamburger > span{
+        transform: rotate(135deg);
+    }
+    .toggler:checked + .hamburger > .first,
+    .toggler:checked + .hamburger > .third{
+        position: absolute;
+        top: 0;
+        transform: rotate(225deg);
+    }
+    .toggler:checked:hover + .hamburger > span{
+        transform: rotate(720deg);
+    }
+    .toggler:checked ~ #menu{
+        transform: translateY(390px);
+        background-color: #2f618a;
+        border-bottom: 1px solid #f1f1f1;
+    }
+    .item{
+        width: 100%;
+    }
+    .timeline > li {
+        margin-bottom: 50px;
+    }
+    .item-portfolio{
+        width: 100%;
+    }
+}

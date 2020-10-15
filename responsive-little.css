@@ -1,0 +1,20 @@
+@media only screen and (max-width: 375px){
+    .name{
+        font-size: 1.2em;
+    }
+    .line-timeline{
+        display: none;
+    }
+    .badge{
+        display: none;
+    }
+
+    .timeline-panel-container, .timeline-panel-container-rev {
+        float: none;
+        width: 100%;
+    }
+    .timeline > li {
+        margin-bottom: 30px;
+        height: auto;
+    }
+}
