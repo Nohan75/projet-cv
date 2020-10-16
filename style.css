@@ -238,12 +238,23 @@ a.button{
 .navbar{
     position: fixed;
     top: 0;
+    opacity: 0;
     background-color: #2f618a;
     height: 60px;
     border-bottom: 1px solid #f1f1f1;
     width: 100%;
     z-index: 3;
     transition: all 0.4s ease-in-out;
+    animation: NavDown 0.5s 2s forwards cubic-bezier(0.97, -0.39, 0, 1.38);
+}
+@keyframes NavDown{
+    0% {
+        top: -60px;
+    }
+    100% {
+        top: 0;
+        opacity: 1;
+    }
 }
 #menu{
     display: flex;
